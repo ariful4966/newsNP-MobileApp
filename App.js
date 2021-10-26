@@ -1,5 +1,6 @@
 //import liraries
 import React from 'react';
+import FetureNews from './app/components/FetureNews';
 import Screen from './app/components/Screen';
 import SearchBar from './app/components/SearchBar';
 
@@ -8,6 +9,7 @@ const App = () => {
   return (
     <Screen>
       <SearchBar />
+      <FetureNews />
     </Screen>
   );
 };
