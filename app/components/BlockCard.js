@@ -1,29 +1,24 @@
 //import liraries
 import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 import Subtitle from './Subtitle';
 import Title from './Title';
 
 // create a component
-const BlockCard = ({style}) => {
+const BlockCard = ({style, imageStyle, item}) => {
+  const {title, content, id, thumbnail,}=item
   return (
     <View style={[styles.container, style]}>
       <Image
-        source={require('../../assets/desktopBg.jpg')}
-        style={styles.image}
+        source={thumbnail}
+        style={[styles.image, imageStyle]}
       />
       <View style={styles.contentContainer}>
         <Title>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quia,
-          voluptatem, possimus aspernatur quos rerum obcaecati magni doloribus
-          sit rem molestias numquam perferendis veritatis fugiat dolorum placeat
-          sed consequuntur quaerat.
+         {title}
         </Title>
         <Subtitle>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
-          voluptates minima itaque pariatur corrupti eaque velit possimus?
-          Dolorem aspernatur iste harum earum suscipit iusto, maiores ipsam,
-          exercitationem ab voluptatum excepturi!
+          {content}
         </Subtitle>
       </View>
     </View>

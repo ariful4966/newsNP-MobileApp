@@ -1,10 +1,10 @@
 //import liraries
 import React from 'react';
-import {StatusBar, StyleSheet, View} from 'react-native';
+import { ScrollView, StatusBar, StyleSheet } from 'react-native';
 
 // create a component
 const Screen = ({children}) => {
-  return <View style={styles.container}>{children}</View>;
+  return <ScrollView style={styles.container}>{children}</ScrollView>;
 };
 
 // define your styles

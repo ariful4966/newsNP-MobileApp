@@ -3,8 +3,8 @@ import React from 'react';
 import BlockCard from './BlockCard';
 
 // create a component
-const FetureNews = () => {
-  return <BlockCard style={{marginVertical: 15}} />;
+const FetureNews = ({item}) => {
+  return <BlockCard item={item} style={{marginVertical: 15}} />;
 };
 
 // define your styles
