@@ -1,29 +1,45 @@
 //import liraries
-import React from 'react';
-import BreakingNews from './app/components/BrkingNews';
-import EntertainmentNews from './app/components/EnterntainmentNews';
-import FetureNews from './app/components/FetureNews';
-import PoliticalNews from './app/components/PoliticalNews';
+import React, { useEffect, useState } from 'react';
+import { Text } from 'react-native';
 import Screen from './app/components/Screen';
-import SearchBar from './app/components/SearchBar';
-import TechNews from './app/components/TechNews';
 import data from './assets/news';
 
 // create a component
 const App = () => {
-  const breakingNews = data.filter(item=>item.category === 'breaking-news')
-  const techNews = data.filter(item=>item.category === 'tech')
-  const politicalNews = data.filter(item=>item.category === 'political')
-  const entertainmentNews = data.filter(item=>item.category === 'entertainment')
- 
+  const [num, setNum] = useState(0);
+
+  // const useState = (initialValue)=>{
+  //   let state = initialValue;
+
+  //   function functionToResetState(value){
+  //     state = value
+  //   }
+
+  //   return [state, functionToResetState]
+  // }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setNum(num + 5);
+    }, 4000);
+  }, [num]);
+
+  const breakingNews = data.filter(item => item.category === 'breaking-news');
+  const techNews = data.filter(item => item.category === 'tech');
+  const politicalNews = data.filter(item => item.category === 'political');
+  const entertainmentNews = data.filter(
+    item => item.category === 'entertainment',
+  );
+
   return (
     <Screen>
-      <SearchBar  />
+      {/* <SearchBar  />
       <FetureNews  item={data[1]}/> 
       <BreakingNews data={breakingNews} />
       <PoliticalNews data={politicalNews}/>
       <TechNews data={techNews}/>
-      <EntertainmentNews data={entertainmentNews}/>
+      <EntertainmentNews data={entertainmentNews}/> */}
+      <Text>{num}</Text>
     </Screen>
   );
 };
