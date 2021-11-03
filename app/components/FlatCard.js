@@ -9,7 +9,7 @@ const FlatCard = ({item}) => {
   const {title, content, id, thumbnail} = item;
   return (
     <View style={styles.container}>
-      <Image source={thumbnail} style={styles.image} />
+      <Image source={{uri:thumbnail}} style={styles.image} />
       <View style={styles.contentContainer}>
         <Title>{title}</Title>
         <Subtitle>{content}</Subtitle>

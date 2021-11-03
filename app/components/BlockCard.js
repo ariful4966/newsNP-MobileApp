@@ -10,7 +10,7 @@ const BlockCard = ({style, imageStyle, item}) => {
   return (
     <View style={[styles.container, style]}>
       <Image
-        source={thumbnail}
+        source={{uri:thumbnail}}
         style={[styles.image, imageStyle]}
       />
       <View style={styles.contentContainer}>

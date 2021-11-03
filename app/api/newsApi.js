@@ -13,7 +13,7 @@ const getAll = async () => {
   }
 };
 
-const getByCategory = (category, qty) => {
+const getByCategory =  async(category, qty) => {
   const endpoint = qty ? `/news/${category}/${qty}` : `/news/${category}`;
 
   try {
