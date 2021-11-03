@@ -1,8 +1,8 @@
 //import liraries
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import FlatCard from './FlatCard';
 import Title from './Title';
+import VerticalCard from './VerticalCard';
 
 // create a component
 const VerticlList = ({title, data}) => {
@@ -11,7 +11,7 @@ const VerticlList = ({title, data}) => {
       <Title>{title}</Title>
       <View style={styles.contentContainer}>
         {data.map(item => (
-          <FlatCard item={item} key={item.id} />
+          <VerticalCard item={item} key={item.id} />
         ))}
       </View>
     </View>

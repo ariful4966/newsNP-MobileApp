@@ -1,4 +1,12 @@
 {
   "name": "NewsNP",
-  "displayName": "NewsNP"
+  "displayName": "NewsNP",
+  "splash": {
+    "image": "./assets/splash.pgn",
+    "resizeMode": "cover",
+    "backgroundColor": "#ff0000"
+  },
+  "updates": {
+    "fallbackToCacheTimeout": 0
+  }
 }
